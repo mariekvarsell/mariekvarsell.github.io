@@ -138,9 +138,9 @@ footer .copyright-text p {
 	}
 }
 
-.profile-photo {
-	background-image: url("https://images.pexels.com/photos/54319/cranesbill-blossom-bloom-blue-54319.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb");
-	background-color: #222;
+.header {
+	/* background-image: url("https://static.pexels.com/photos/246230/pexels-photo-246230.png"); */
+	/* background-color: rgb(69,117,150); */
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
@@ -151,10 +151,16 @@ footer .copyright-text p {
 	background-position: center center;
 	min-height: 100vh;
 	position: relative;
-	/* opacity: 0 */
+
+    
+	/* background: rgb(69,117,150); */
+	/* background: -webkit-linear-gradient(right,rgb(31, 63, 83),rgb(69,117,150)); */
+	/* background: -moz-linear-gradient(right,rgb(43, 81, 105),rgb(69,117,150)); */
+	background: radial-gradient(ellipse at center, rgb(31, 63, 83) 0%,rgb(69,117,150) 100%);
+	
 }
 
-.profile-photo .presentation {
+.header .presentation {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -162,7 +168,7 @@ footer .copyright-text p {
 	transform: translate(-50%,-50%);
 }
 
-.profile-photo .my-name {
+.header .my-name {
 	/* display: inline-block; */
 	margin-top: 30px;
 	text-align: center;
@@ -171,14 +177,14 @@ footer .copyright-text p {
 	color: #fff
 }
 
-.profile-photo .my-name h1 {
+.header .my-name h1 {
 	font-weight: bold;
 	/* font-family: Raleway; */
 	/* letter-spacing: 5px; */
 	/* text-transform: uppercase */
 }
 
-.profile-photo .my-name .name-tagline {
+.header .my-name .name-tagline {
 	font-weight: normal;
 	/* font-family: Raleway; */
 	font-weight: 300;
@@ -188,7 +194,7 @@ footer .copyright-text p {
 	padding: 0 15px
 }
 
-.profile-photo .photo {
+.header .photo {
 	width: 301px;
 	height: 301px;
 	margin: 0 auto;
@@ -204,49 +210,7 @@ footer .copyright-text p {
 	/* z-index: 10 */
 }
 
-.profile-photo .language {
-	position: fixed;
-	top: 10px;
-	right: 10px;
-	z-index: 9999
-}
-
-.profile-photo .language li {
-	display: inline
-}
-
-.profile-photo .language li.ativo a {
-	background-color: #000000;
-	color: #ffffff
-}
-
-.profile-photo .language li a {
-	color: #202020;
-	font-weight: bold;
-	text-transform: uppercase;
-	margin: 0 3px;
-	background: #fff;
-	padding: 5px;
-	border-radius: 3px;
-	-webkit-opacity: 0.5;
-	opacity: 0.5
-}
-
-.profile-photo .language li a:hover {
-	-webkit-opacity: 1;
-	opacity: 1
-}
-
-.profile-photo .language li:after {
-	content: '|';
-	margin-left: 6px
-}
-
-.profile-photo .language li:last-child:after {
-	content: ''
-}
-
-.profile-photo .btn-responsive-menu {
+.header .btn-responsive-menu {
 	display: none;
 	font-size: 30px;
 	position: fixed;
@@ -254,23 +218,20 @@ footer .copyright-text p {
 	right: 10px;
 	z-index: 9999
 }
+.btn-responsive-menu:before {
+	content: "\2261";
+	display: block;
+	font-size: 74px;
+	line-height: 40px;
+}
 
-.profile-photo .responsive-menu {
+
+.responsive-menu {
 	display: none
 }
 
-.profile-photo .gradiente {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	bottom: 0px;    
-	background: #304352;
-	background: -webkit-linear-gradient(bottom right,#304352,#162851);
-	background: -moz-linear-gradient(bottom right,#304352,#162851);
-	background: linear-gradient(bottom right,#304352,#162851);
-}
 
-.profile-photo .scroll-down {
+.header .scroll-down {
 	display: none;
 	background: url(../img/scroll-down.png) top center no-repeat;
 	width: 75px;
@@ -281,7 +242,7 @@ footer .copyright-text p {
 	margin-left: -37px
 }
 
-.profile-photo .scroll-down span {
+.header .scroll-down span {
 	font-size: 10px;
 	display: block;
 	text-align: center;
@@ -289,140 +250,96 @@ footer .copyright-text p {
 	font-weight: bold
 }
 
-.profile-photo-show {
-	-webkit-transition: opacity 2.0s ease-in;
-	-moz-transition: opacity 2.0s ease-in;
-	-o-transition: opacity 2.0s ease-in;
-	transition: opacity 2.0s ease-in;
-	opacity: 1
-}
-
 @media screen and (min-width: 320px) and (max-width: 768px) {
-	.profile-photo-white .btn-responsive-menu {
+	.header-white .btn-responsive-menu {
 			color:#fff
 	}
 
-	.profile-photo .photo {
-			margin-top: 150px;
+	.header .presentation {
+		width: 100%;
+	}
+	.header .photo {
 			width: 150px;
 			height: 150px;
-			background-size: contain;
-			margin-left: -75px
 	}
 
-	.profile-photo .my-name {
-			width: 100%;
-			top: 340px;
-			margin-left: initial;
-			left: initial
-	}
-
-	.profile-photo .language {
-			display: none
-	}
-
-	.profile-photo .language li.ativo {
-			display: inline !important
-	}
-
-	.profile-photo .btn-responsive-menu {
-			display: block
-	}
-
-	.profile-photo .responsive-menu {
-			display: block
-	}
-
-	.profile-photo .responsive-menu.open {
+	.header .btn-responsive-menu {
 			display: block;
-			-webkit-transition: height 2.0s ease-in;
-			-moz-transition: height 2.0s ease-in;
-			-o-transition: height 2.0s ease-in;
-			transition: height 2.0s ease-in;
-			height: 100%
 	}
 
-	.profile-photo .responsive-menu.open .menu {
-			display: block
-	}
-
-	.profile-photo .responsive-menu.open .btn-responsive-menu {
-			color: #E5E5E5
-	}
-
-	.profile-photo .responsive-menu .menu {
-			display: none;
-			position: absolute;
+	.responsive-menu {
+			display: block;
+		}
+		
+		.responsive-menu.open {
+			/* display: block; */
+			/* height: 100%; */
+		}
+		
+		
+		.responsive-menu.open .btn-responsive-menu {
+			color: #E5E5E5;
+		}
+		
+		.responsive-menu .menu {
+			display: block;
+			position: fixed;
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: 100%;
+			height: 0;
 			z-index: 999;
 			background-color: #202020;
 			padding-top: 50px;
-			font-size: 26px
+			font-size: 26px;
+			overflow: hidden;
+			-webkit-transition: height .3s ease-in;
+			-moz-transition: height .3s ease-in;
+			-o-transition: height .3s ease-in;
+			transition: height .3s ease-in;
+		}
+		.responsive-menu.open .menu {
+			/* display: block; */
+			height: 100%;
 	}
-
-	.profile-photo .responsive-menu .menu .logo {
+		
+	.responsive-menu .menu .logo {
 			width: 150px;
 			margin: 0 auto 40px auto;
 			display: block;
 			opacity: 0.9
 	}
 
-	.profile-photo .responsive-menu .menu ul {
+	.responsive-menu .menu ul {
 			text-align: center;
 			background-color: #E5E5E5;
 			height: 100%;
 			padding-top: 30px
 	}
 
-	.profile-photo .responsive-menu .menu ul .language {
-			display: block;
-			position: relative;
-			top: initial;
-			right: initial;
-			padding-top: 0
-	}
-
-	.profile-photo .responsive-menu .menu ul .language li {
-			margin: 0
-	}
-
-	.profile-photo .responsive-menu .menu ul .language li a {
-			display: inline
-	}
-
-	.profile-photo .responsive-menu .menu ul li {
-			margin: 30px 0;
-			text-transform: uppercase
-	}
-
-	.profile-photo .responsive-menu .menu ul li a {
-			display: block
-	}
-
-	.profile-photo .responsive-menu .menu ul li:first-child {
+	.responsive-menu .menu ul li:first-child {
 			margin-top: 0
 	}
 
-	.profile-photo .responsive-menu .menu ul li span {
+	.responsive-menu .menu ul li span {
 			font-size: 14px
 	}
 }
 
-.profile-about {
+.text-section {
 	background-color: #fff;
 	color: #202020;
 	min-height: 100vh;
 	position: relative;
 	padding: 80px 0
 }
-
-.profile-about .text-about {
+.text-section .text {
 	width: 650px;
 	margin: 0 auto;
-	letter-spacing: 1px
+}
+
+.profile-about {
+	
 }
 
 .profile-about .text-about h4 {

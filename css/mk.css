@@ -338,51 +338,29 @@ footer .copyright-text p {
 	margin: 0 auto;
 }
 
-.profile-about {
-	
+.text-section a {
+	color: #a3a3a3;
+	text-decoration: underline;
+	font-style: italic
+}
+.text-section a:hover {
+	text-decoration: none;
 }
 
-.profile-about .text-about h4 {
+.text-about h4 {
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: 1px
 }
 
-.profile-about .text-about a {
-	color: #a3a3a3;
-	text-decoration: underline;
-	font-style: italic
-}
-
-.profile-about .text-about a:hover {
-	text-decoration: none
+.text p {
+	color: #8a8a8a;
+	line-height: 1.5em;
+	margin: 30px 0 0 0;
 }
 
 .profile-about .text-about .aname {
 	cursor: pointer
-}
-
-.profile-about .text-about p {
-	color: #8a8a8a;
-	line-height: 1.5em;
-	margin: 30px 0 0 0;
-	/* z-indexms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	filter: alpha(opacity=0);
-	-moz-opacity: 0;
-	-khtml-opacity: 0;
-	opacity: 0; */
-	transition: opacity .25s ease-in-out;
-	-moz-transition: opacity .25s ease-in-out;
-	-webkit-transition: opacity .25s ease-in-out;
-	-o-transition: opacity .25s ease-in-out
-}
-
-.profile-about .text-about p.show {
-	z-indexms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	filter: alpha(opacity=100);
-	-moz-opacity: 1;
-	-khtml-opacity: 1;
-	opacity: 1
 }
 
 .profile-about .social-links {
@@ -442,7 +420,7 @@ footer .copyright-text p {
 	.profile-about .social-links ul li a {
 			font-size: 26px
 	}
-}
+} /* /MEDIA QUERY */
 
 .profile-quote {
 	background-color: #202020;
@@ -485,27 +463,10 @@ footer .copyright-text p {
 	font-size: 32px;
 	letter-spacing: 1.6px;
 	margin: 30px 60px;
-	/* z-indexms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	filter: alpha(opacity=0);
-	-moz-opacity: 0;
-	-khtml-opacity: 0;
-	opacity: 0; */
-	transition: opacity .25s ease-in-out;
-	-moz-transition: opacity .25s ease-in-out;
-	-webkit-transition: opacity .25s ease-in-out;
-	-o-transition: opacity .25s ease-in-out
-}
-
-.profile-quote .text-quote p.show {
-	z-indexms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	filter: alpha(opacity=100);
-	-moz-opacity: 1;
-	-khtml-opacity: 1;
-	opacity: 1
 }
 
 .profile-quote .text-quote .author-quote {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Muli', sans-serif;
 	font-weight: 300;
 	font-size: 11px;
 	letter-spacing: .25em;
